@@ -1,0 +1,59 @@
+<h3>Gestão de Gastos</h3>
+
+<br>
+
+<div [formGroup]="cadastroForm" class="p-col-12">
+    <div class="ui-g ui-fluid">
+        <div class="ui-g-3 ui-md-3 ui-sm-12">
+            <label for="material">Material</label>
+            <input id="material" type="text" size="35" pInputText formControlName="material"
+                placeholder="Gasto com material" (keypress)="numberOnly($event)" required>
+        </div>
+
+        <div class="ui-g-3 ui-md-3 ui-sm-12">
+            <label for="maodeobra">Mão de obra</label>
+            <input id="maodeobra" type="text" size="35" pInputText formControlName="maoObra"
+                placeholder="Gasto com mão de obra" (keypress)="numberOnly($event)" required>
+        </div>
+
+        <div class="ui-g-3 ui-md-3 ui-sm-12">
+            <label for="quantidade">Quantidade</label>
+            <input id="quantidade" type="text" size="35" pInputText formControlName="quantidade"
+                placeholder="Quantidade produzida" (keypress)="numberOnly($event)" required>
+        </div>
+
+        <div class="ui-g-3 ui-md-3 ui-sm-12">
+            <label for="lucro">Porcentagem de lucro</label>
+            <input id="cnpj" type="text" size="35" pInputText formControlName="porcentagem"
+                placeholder="Porcentagem de lucro" (keypress)="numberOnly($event)" maxlength="3" required>
+        </div>
+    </div>
+
+    <br>
+
+    <p-footer>
+        <div style="float: right;">
+            <button type="button" pButton icon="pi pi-check" (click)="calcular()" label="Calcular"
+                [disabled]="!cadastroForm.valid" style="float: right;"></button>
+        </div>
+    </p-footer>
+</div>
+
+<br><br>
+
+<hr>
+
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-12 ui-sm-12">
+        <p style="margin: 0;">Valor de produção - <b>{{custo ? (custo | currency) : 'R$: 0,00'}}</b></p>
+    </div>
+    <div class="ui-g-12 ui-md-12 ui-sm-12">
+        <p style="margin: 0;">Valor de lucro - <b>{{porcentagem ? (porcentagem | currency) : 'R$: 0,00'}}</b></p>
+    </div>
+    <div class="ui-g-12 ui-md-12 ui-sm-12">
+        <p style="margin: 0;">Valor de venda - <b>{{total ? (total | currency) : 'R$: 0,00'}}</b></p>
+    </div>
+    <div class="ui-g-12 ui-md-12 ui-sm-12">
+        <p style="margin: 0;">Valor por item - <b>{{totalPorItem ? (totalPorItem | currency) : 'R$: 0,00'}}</b></p>
+    </div>
+</div>
