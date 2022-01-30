@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   items: any[];
   visibleSidebar2: boolean;
 
+  menu: boolean;
   user: string;
   perfil: string;
 

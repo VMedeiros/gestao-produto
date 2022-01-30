@@ -20,6 +20,7 @@ import { ProdutoComponent } from './produto/produto.component';
         RouterModule,
         ReactiveFormsModule,
         FormsModule,
+        PrimeNgModule
     ],
     providers: [],
     exports: [
