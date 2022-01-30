@@ -1,5 +1,5 @@
 {
-  "name": "gestao-gastos",
+  "name": "gestao-produto",
   "version": "1.0.0-SNAPSHOT",
   "scripts": {
     "ng": "ng",

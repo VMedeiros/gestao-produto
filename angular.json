@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gestao-gastos": {
+    "gestao-produto": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gestao-gastos",
+            "outputPath": "dist/gestao-produto",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -53,18 +53,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gestao-gastos:build"
+            "browserTarget": "gestao-produto:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "gestao-gastos:build:production"
+              "browserTarget": "gestao-produto:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gestao-gastos:build"
+            "browserTarget": "gestao-produto:build"
           }
         },
         "test": {
@@ -98,7 +98,7 @@
         }
       }
     },
-    "gestao-gastos-e2e": {
+    "gestao-produto-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -106,7 +106,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "gestao-gastos:serve"
+            "devServerTarget": "gestao-produto:serve"
           }
         },
         "lint": {
@@ -121,7 +121,7 @@
       }
     }
   },
-  "defaultProject": "gestao-gastos",
+  "defaultProject": "gestao-produto",
   "cli": {
     "analytics": "66e90ca2-4923-45bd-a791-8dc13199081d"
   }
